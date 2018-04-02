@@ -1,0 +1,35 @@
+{
+  "name": "clarity",
+  "version": "1.0.0",
+  "description": "mobile web design project",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sasswatch": "node-sass --watch build/dist/scss/ --output build/css/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeanJoseph93/clarity.git"
+  },
+  "keywords": [
+    "responsive",
+    "tools",
+    "mobile",
+    "nodejs",
+    "web",
+    "design"
+  ],
+  "author": "Dean Dolev Joseph",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DeanJoseph93/clarity/issues"
+  },
+  "homepage": "https://github.com/DeanJoseph93/clarity#readme",
+  "dependencies": {
+    "node-sass": "~4.8.3"
+  },
+  "devDependencies": {
+    "bower": "^1.8.4",
+    "browserify": "^16.1.1"
+  }
+}
