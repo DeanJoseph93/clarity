@@ -7,37 +7,43 @@
     let
         /*$               =   require("node_modules/jquery/dist/jquery.min"),
         enquire         =   require("node_modules/enquire.js/dist/enquire.min"),*/
-        $menuBtn        =   $(".menuBtn"),
-        $navContainer   =   $(".topNav .containerNav")
+        $menuBtn        =   $(".menuBtn"),/*
+        $navContainer   =   $(".topNav .containerNav"),*/
+        $bannerImg      =   $("#border_banner"),
+        $bannerUl        =   $(".bannerNav .bannerUl")
     ;
 
-    window.addEventListener("load", () => {
+
+    /***
+     * @name : navMedia_query
+     * @desc : this will use jQuery and enquire to manipulate navigation menu button and navlinks
+     */
+    navMedia_query = () => {
         enquire.register("screen and (min-width: 768px)", {
 
             match: function () {
-                $navContainer.show();
+                $bannerUl.hide();
+
             },
 
             unmatch: function () {
-                $navContainer.hide();
+                $bannerUl.hide();
             }
         }); // enquire
 
-        $menuBtn.on("click", () => {
-            $navContainer
-                .toggleClass('open');
-        });// click
-
-        /*$("#nav-icon1").click(function () {
-            $(this).toggleClass('open');
-            $navContainer
-                .slideToggle();
-        });*/
 
         $menuBtn.on("click", () => {
-            $navContainer
+            /*$bannerImg
+                .fadeToggle('fast');*/
+            $bannerUl
                 .slideToggle();
         })// click
-    });
+    }; //navMedia_query
+
+    init = () => {
+        navMedia_query();
+    }; //init
+
+    window.addEventListener("load", init);
 
 })();

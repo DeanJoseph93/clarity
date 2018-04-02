@@ -32,154 +32,123 @@ body{
 
 .container{
   /*width: 960px;*/
-  width: 92%;
+  width: 95%;
   margin: 0 auto;
 }
 
-
-
+.top_row {
+  display: flex;
+  justify-content: space-between;
+}
 
 /* -----------------------------
       HEADER  SECTION
 -------------------------------- */
-header{
-  background-color: #F0F0F0;
+
+#headTop {
+  width: 100%;
+  background-color: #ffffff;
 }
 
-.logo{
-  text-align: center;
+
+.logoLeft {
+  margin-top: 2%;
 }
 
-.banner{
-  margin-top: -180px;
+.rightNav {
+  margin-top: 1%;
+  /*margin: 0px -9px;*/
+  /*margin-left: 3%;*/
 }
 
+.menuBtn {
+  cursor: pointer;
+}
 /* -----------------------------
       NAV  SECTION
 -------------------------------- */
-.topNav {
-  background-color: goldenrod;
-  position: sticky;
-  top:0;
-}
 
 
-
-.topNav ul a{
+.topNav ul a {
   display: block;
-  color:#fff;
+  color: #000;
   text-decoration: none;
-  padding:10px;
-  background-color: goldenrod;
+  padding: 10px;
+  font-size: 14px;
   text-transform: capitalize;
 }
 
-/*
-    PSEUDO CLASSES
-ELEMENT:hover   =>  styling the element while we hover over it
+.bannerNav ul a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 14px;
+  text-transform: capitalize;
+}
 
-ELEMENT:active  =>  styling the element while we hold left mouse
-                        btn down on the element
-
-*/
 .topNav ul a:hover{
-  background-color: #fff;
-  color: #9F146D;
+  color: #000;
 }
-
-.topNav ul a:active{
-  text-decoration: underline;
-}
-
 
 /* -----------------------------
-      MAIN  SECTION
--------------------------------- */
-.underlined{
-  border-bottom: 2px dotted #CDDA23;
-  padding-bottom: 15px;
-  margin-bottom: 20px;
-}
-
-main h1{
-  color:#9F146D;
-  font-size: 28px;
-  padding-top: 90px;
-}
-
-main h2{
-  font-size: 24px;
-  margin-top: 20px;
-  color: #666;
-}
-
-
-main p{
-  color: #333;
-  word-spacing: 1.8px;
-  letter-spacing: .9px;
-  line-height: 20px;
-  text-align: justify;
-  margin-bottom: 20px;
-}
-
-.rightImgs{
-  float: right;
-}
-/* -----------------------------
-      FOOTER  SECTION
+  Border Banner SECTION
 -------------------------------- */
 
-footer{
-  color: #fff;
-  background-color: #CDDA23;
-  padding: 20px 0 120px;
-  margin-top: 30px;
+.borderBanner {
+  margin-top: 1%;
+  border: 1px solid darkgray;
+  background-color: darkgray;
+  box-shadow: 0 10px #888888;
+  height: 30px;
+  width: auto;
 }
 
-
+.bannerUl {
+  background-color: goldenrod;
+  z-index: 999;
+}
 
 /* -----------------------------
       <768 MEDIA QUERY  SECTION
 -------------------------------- */
 
 @media screen and (max-width: 767px){
-  .banner{ display: none; }
 
+  .borderBanner {
+    margin-top: 3%;
+  }
 
-  .topNav ul a {
+  .bannerNav ul a {
     text-align: center;
     padding:20px 0;
-    border-bottom: 1px solid #fff;
+    border-bottom: 2px solid #000;
   }
 
-  .topNav li:first-child a {
-    border-top: 1px solid #fff;
+  .bannerNav li:first-child a {
+    border-top: 2px solid #000;
   }
 
-  .topNav { position: static; }
+  .bannerNav {
+    position: static;
+  }
 
   .topNav .container {
     display: none;
   }
 
+  .containerNav {
+    display: none;
+  }
 
+  .bannerUl {
+    display: none;
+  }
+  .connect_clarity {
+    border: none;
+  }
 
 }/*============ max width: 767px (sm)*/
-
-.logo{
-  /* 297/960 = x/100 => x = 297 * 100 / 960 =>  */
-  width: 30.9375%;
-  margin: 0 auto;
-}
-
-
-
-.banner img, .logo img{
-  width: 100%;
-  min-width: 100%;
-  height: auto;
-}
 
 
 /* -----------------------------
@@ -187,26 +156,15 @@ footer{
 -------------------------------- */
 
 @media screen and (min-width: 768px){
+
   .row{
     display: flex;
     justify-content: space-between;
   }
 
-  /*instead of
-
-  .cell{  margin-right: 2%;  }
-  .cell:last-child{ margin-right: 0 }
-
-  use this:*/
-
   .cell:not(:last-child){
     margin-right: 2%;
   }
-
-  .half { width: 49%; }
-  .oneThird { width: 32%; }
-  .twoThirds { width: 66%; }
-
 
   .topNav ul{
     display: flex;
@@ -217,16 +175,87 @@ footer{
     display: none;
   }
 
+  .bannerUl {
+    display: none;
+  }
+
+  .column_left {
+    width: 62%;
+  }
+
+  .column_right {
+    width: 28%;
+  }
+
+  .connect_clarity, .useful_links {
+    border: 3px solid #000000;
+    margin-bottom: 8%;
+    /*margin: 0 5px;*/
+
+    #clarity_content, #useful_content{
+      padding: 2px 20px;
+    }
+  }
+
 }/*============ min width: 768px (lg) */
 
 
 
 /* -----------------------------
-        SECTION
+      MAIN  SECTION
 -------------------------------- */
+
+#main_content {
+  margin-top: 3%;
+}
+main h2{
+  font-size: 20px;
+  color: #000;
+  font-weight: 800;
+}
+
+
+main p{
+  font-size: 14px;
+  color: #000;
+  word-spacing: 1.3px;
+  /*letter-spacing: .9px;*/
+  line-height: 20px;
+  /*text-align: justify;*/
+  margin-bottom: 20px;
+}
+
+
+
+
+
+
 /* -----------------------------
-        SECTION
+       MAIN SECTION
 -------------------------------- */
+
+#banner {
+  margin-top: 15px;
+}
+
+#bannerImg {
+  height: 136px;
+  width: 100%;
+  z-index: 10;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* -----------------------------
+     Left Column   SECTION
+-------------------------------- */
+
+
+
 /* -----------------------------
         SECTION
 -------------------------------- */
