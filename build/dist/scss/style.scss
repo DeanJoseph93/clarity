@@ -23,33 +23,232 @@ html, body{
   height: 100%;
 }
 
-.container {
-  width: 960pc;
+/* -----------------------------
+       GENERAL SECTION
+-------------------------------- */
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+  /*width: 960px;*/
+  width: 92%;
   margin: 0 auto;
 }
 
+
+
+
 /* -----------------------------
-       GENERAL SECTION
+      HEADER  SECTION
+-------------------------------- */
+header{
+  background-color: #F0F0F0;
+}
+
+.logo{
+  text-align: center;
+}
+
+.banner{
+  margin-top: -180px;
+}
+
+/* -----------------------------
+      NAV  SECTION
+-------------------------------- */
+.topNav {
+  background-color: #9F146D;
+  position: sticky;
+  top:0;
+}
+
+
+
+.topNav ul a{
+  display: block;
+  color:#fff;
+  text-decoration: none;
+  padding:10px;
+  background-color: #9F146D;
+  text-transform: capitalize;
+}
+
+/*
+    PSEUDO CLASSES
+ELEMENT:hover   =>  styling the element while we hover over it
+
+ELEMENT:active  =>  styling the element while we hold left mouse
+                        btn down on the element
+
+*/
+.topNav ul a:hover{
+  background-color: #fff;
+  color: #9F146D;
+}
+
+.topNav ul a:active{
+  text-decoration: underline;
+}
+
+
+/* -----------------------------
+      MAIN  SECTION
+-------------------------------- */
+.underlined{
+  border-bottom: 2px dotted #CDDA23;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+main h1{
+  color:#9F146D;
+  font-size: 28px;
+  padding-top: 90px;
+}
+
+main h2{
+  font-size: 24px;
+  margin-top: 20px;
+  color: #666;
+}
+
+
+main p{
+  color: #333;
+  word-spacing: 1.8px;
+  letter-spacing: .9px;
+  line-height: 20px;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.rightImgs{
+  float: right;
+}
+/* -----------------------------
+      FOOTER  SECTION
 -------------------------------- */
 
+footer{
+  color: #fff;
+  background-color: #CDDA23;
+  padding: 20px 0 120px;
+  margin-top: 30px;
+}
+
 
 
 /* -----------------------------
-       GENERAL SECTION
+      <768 MEDIA QUERY  SECTION
 -------------------------------- */
 
+@media screen and (max-width: 767px){
+  .banner{ display: none; }
+
+
+  .topNav ul a {
+    text-align: center;
+    padding:20px 0;
+    border-bottom: 1px solid #fff;
+  }
+
+  .topNav li:first-child a {
+    border-top: 1px solid #fff;
+  }
+
+  .topNav { position: static; }
+
+  .topNav .container {
+    display: none;
+  }
+
+
+
+}/*============ max width: 767px (sm)*/
+
+.logo{
+  /* 297/960 = x/100 => x = 297 * 100 / 960 =>  */
+  width: 30.9375%;
+  margin: 0 auto;
+}
+
+
+
+.banner img, .logo img{
+  width: 100%;
+  min-width: 100%;
+  height: auto;
+}
 
 
 /* -----------------------------
-       GENERAL SECTION
+      >767 MEDIA QUERY  SECTION
 -------------------------------- */
 
+@media screen and (min-width: 768px){
+  .row{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /*instead of
+
+  .cell{  margin-right: 2%;  }
+  .cell:last-child{ margin-right: 0 }
+
+  use this:*/
+
+  .cell:not(:last-child){
+    margin-right: 2%;
+  }
+
+  .half { width: 49%; }
+  .oneThird { width: 32%; }
+  .twoThirds { width: 66%; }
+
+
+  .topNav ul{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menuIcon { display: none; }
+
+}/*============ min width: 768px (lg) */
+
+
+
 
 /* -----------------------------
-       GENERAL SECTION
+      EMBEDDED  SECTION
 -------------------------------- */
+/* you can also use an online tool at http://embedresponsively.com/ */
+
+
+.embedContainer{
+  position: relative;
+  height: 0;
+  padding-top:25px;
+  padding-bottom: 56.25%;
+}
+
+
+.embedded{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
 
 /* -----------------------------
-       GENERAL SECTION
+        SECTION
+-------------------------------- */
+/* -----------------------------
+        SECTION
+-------------------------------- */
+/* -----------------------------
+        SECTION
 -------------------------------- */

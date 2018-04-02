@@ -3,32 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <title>Clarity</title>
+    <!-- force IE to use latest engine -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+maximum-scale=1, user-scalable=no">
+    <!-- force fullscreen for apple devices -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- safari status bar black / black-translucent -->
+    <meta name="apple-mobile-web-app-status-bar-style"
+          content="black" />
+    <!-- avoid phone calls apple / blackberry -->
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-rim-auto-match" content="none">
 
     <!--/fonts-->
+
+    <!--/favicons-->
+
 
     <!--/main css-->
     <link rel="stylesheet" href="build/css/style.css" media="screen">
 
 </head>
 <body>
-    <div id="wrapper">
-        <header>
+<div id="wrapper">
+    <header>
+        <div class="container">
+            <div class="row">
 
-        </header><!--/end header-->
+            </div><!--/row-->
+        </div><!--/container-->
+    </header><!--/end header-->
 
-        <main>
+    <nav class="topNav">
+        <div class="menuIcon">
+            <img class="menuBtn" src="build/imgs/menu.png" width="50" alt="sandwich menu icon" >
+        </div><!--/menuIcon-->
 
-        </main><!--/end main-->
+        <div class="container">
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="video.html">video</a></li>
+                <li><a href="map.html">map</a></li>
+                <li><a href="#">news</a></li>
+                <li><a href="#">blog</a></li>
+                <li><a href="contacts.html">contacts</a></li>
+            </ul><!--/ulist-->
+        </div><!--/nav container-->
+    </nav><!--/topNav-->
 
-        <footer>
+    <main>
 
-        </footer><!--/end footer-->
+    </main><!--/end main-->
+
+    <footer>
+        <div class="container">
+            Training Dragon &copy; 2017
+        </div><!--/footer container-->
+    </footer><!--/end footer-->
+
+    <!--/jquery script-->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+    <!--/enquire script-->
+    <script src="node_modules/enquire.js/dist/enquire.min.js"></script>
+
+    <!--/js script-->
+    <script src="build/js/js.js"></script>
+
+</div><!--/wrapper-->
 
 
-        <!--/ js script-->
-
-
-
-    </div><!--/wrapper-->
 </body>
 </html>
