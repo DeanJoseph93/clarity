@@ -155,11 +155,13 @@ body {
   .bannerUl {
     display: none; }
   .column_left {
-    width: 62%; }
+    width: 68%;
+    margin-left: 2%; }
   .column_right {
-    width: 28%; }
+    width: 20%;
+    margin-right: 2%; }
   .connect_clarity, .useful_links {
-    border: 3px solid #000000;
+    border: 2px solid #000000;
     margin-bottom: 8%;
     /*margin: 0 5px;*/ }
     .connect_clarity #clarity_content, .connect_clarity #useful_content, .useful_links #clarity_content, .useful_links #useful_content {
