@@ -71,7 +71,7 @@ header {
       NAV  SECTION
 -------------------------------- */
 .topNav {
-  background-color: #9F146D;
+  background-color: goldenrod;
   position: sticky;
   top: 0; }
 
@@ -80,7 +80,7 @@ header {
   color: #fff;
   text-decoration: none;
   padding: 10px;
-  background-color: #9F146D;
+  background-color: goldenrod;
   text-transform: capitalize; }
 
 /*
@@ -192,23 +192,6 @@ footer {
     display: none; } }
 
 /*============ min width: 768px (lg) */
-/* -----------------------------
-      EMBEDDED  SECTION
--------------------------------- */
-/* you can also use an online tool at http://embedresponsively.com/ */
-.embedContainer {
-  position: relative;
-  height: 0;
-  padding-top: 25px;
-  padding-bottom: 56.25%; }
-
-.embedded {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; }
-
 /* -----------------------------
         SECTION
 -------------------------------- */

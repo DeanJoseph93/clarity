@@ -8,7 +8,7 @@
         /*$               =   require("node_modules/jquery/dist/jquery.min"),
         enquire         =   require("node_modules/enquire.js/dist/enquire.min"),*/
         $menuBtn        =   $(".menuBtn"),
-        $navContainer   =   $(".topNav .container")
+        $navContainer   =   $(".topNav .containerNav")
     ;
 
     window.addEventListener("load", () => {
@@ -22,6 +22,17 @@
                 $navContainer.hide();
             }
         }); // enquire
+
+        $menuBtn.on("click", () => {
+            $navContainer
+                .toggleClass('open');
+        });// click
+
+        /*$("#nav-icon1").click(function () {
+            $(this).toggleClass('open');
+            $navContainer
+                .slideToggle();
+        });*/
 
         $menuBtn.on("click", () => {
             $navContainer
