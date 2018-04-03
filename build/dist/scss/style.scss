@@ -23,6 +23,14 @@ html, body{
   height: 100%;
 }
 
+
+/*********** SCSS VARIABLES *******/
+
+$hCol:#303937;
+$pCol:#858f8e;
+$footerCol:#cadad5;
+
+
 /* -----------------------------
        GENERAL SECTION
 -------------------------------- */
@@ -48,6 +56,7 @@ body{
 #headTop {
   width: 100%;
   background-color: #ffffff;
+  padding: 10px 0;
 }
 
 
@@ -56,9 +65,13 @@ body{
 }
 
 .rightNav {
-  margin-top: 1%;
+  margin-top: 4%;
   /*margin: 0px -9px;*/
   /*margin-left: 3%;*/
+}
+
+.menuIcon {
+  margin-top: 7%;
 }
 
 .menuBtn {
@@ -71,16 +84,17 @@ body{
 
 .topNav ul a {
   display: block;
-  color: #000;
+  color: $hCol;
   text-decoration: none;
   padding: 10px;
   font-size: 14px;
   text-transform: capitalize;
+  line-height: 0;
 }
 
 .bannerNav ul a {
   display: block;
-  color: #000;
+  color: $hCol;
   text-decoration: none;
   padding: 10px;
   font-size: 14px;
@@ -88,16 +102,18 @@ body{
 }
 
 .topNav ul a:hover{
-  color: #000;
+  color: $hCol;
 }
 
+.nav-border {
+  border-left: 1px solid $hCol;
+  line-height: 0;
+}
 /* -----------------------------
   Border Banner SECTION
 -------------------------------- */
 
 .borderBanner {
-  margin-top: 1%;
-  border: 1px solid darkgray;
   background-color: darkgray;
   box-shadow: 0 10px #888888;
   height: 30px;
@@ -115,6 +131,10 @@ body{
 
 @media screen and (max-width: 767px){
 
+  #headTop {
+    padding: 0;
+  }
+
   .borderBanner {
     margin-top: 3%;
   }
@@ -122,11 +142,11 @@ body{
   .bannerNav ul a {
     text-align: center;
     padding:20px 0;
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid $hCol;
   }
 
   .bannerNav li:first-child a {
-    border-top: 2px solid #000;
+    border-top: 2px solid $hCol;
   }
 
   .bannerNav {
@@ -146,6 +166,7 @@ body{
   }
   .connect_clarity {
     border: none;
+    margin-bottom: 6%;
   }
 
 }/*============ max width: 767px (sm)*/
@@ -160,6 +181,10 @@ body{
   .row{
     display: flex;
     justify-content: space-between;
+  }
+
+  #headTop {
+    padding: 10px 0;
   }
 
   .cell:not(:last-child){
@@ -189,8 +214,16 @@ body{
     margin-right: 2%;
   }
 
+  .half-cell {
+    width: 34%;
+  }
+
+  .margin_cell {
+    margin-right: 18%;
+  }
+
   .connect_clarity, .useful_links {
-    border: 2px solid #000000;
+    border: 2px solid $hCol;
     margin-bottom: 8%;
     /*margin: 0 5px;*/
 
@@ -209,17 +242,18 @@ body{
 
 #main_content {
   margin-top: 3%;
+  margin-bottom: 3%;
 }
 main h2{
   font-size: 20px;
-  color: #000;
+  color: $hCol;
   font-weight: 800;
 }
 
 
 main p{
   font-size: 14px;
-  color: #000;
+  color: $pCol;
   word-spacing: 1.3px;
   /*letter-spacing: .9px;*/
   line-height: 20px;
@@ -239,7 +273,7 @@ main p{
 }
 
 #bannerImg {
-  height: 136px;
+  height: auto;
   width: 100%;
   z-index: 10;
 }
@@ -264,6 +298,7 @@ ul {
 
 #useLinks li:before {
   content: "\203A \0020";
+  color: $hCol;
 }
 
 .links {
@@ -272,7 +307,11 @@ ul {
 
 .links a{
   text-decoration: none;
-  color: #000000;
+  color: $pCol;
+}
+
+.half-cell {
+  margin-bottom: 3%;
 }
 
 /* -----------------------------
@@ -288,4 +327,28 @@ ul {
   width: 30px;
   margin-bottom: 2px;
   border: 1px solid red;
+}
+
+/* -----------------------------
+        FOOT SECTION
+-------------------------------- */
+
+footer {
+  background-color: $footerCol;
+  font-weight: 800;
+  padding: 20px 0;
+}
+
+.foot_content {
+  text-align: center;
+}
+
+#foot_links {
+  display: flex;
+}
+
+#foot_links li a{
+  padding: 5px 10px;
+  text-decoration: none;
+  color: $hCol;
 }

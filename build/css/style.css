@@ -44,6 +44,7 @@ html, body {
   width: 100%;
   height: 100%; }
 
+/*********** SCSS VARIABLES *******/
 /* -----------------------------
        GENERAL SECTION
 -------------------------------- */
@@ -64,15 +65,19 @@ body {
 -------------------------------- */
 #headTop {
   width: 100%;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  padding: 10px 0; }
 
 .logoLeft {
   margin-top: 2%; }
 
 .rightNav {
-  margin-top: 1%;
+  margin-top: 4%;
   /*margin: 0px -9px;*/
   /*margin-left: 3%;*/ }
+
+.menuIcon {
+  margin-top: 7%; }
 
 .menuBtn {
   cursor: pointer; }
@@ -82,29 +87,32 @@ body {
 -------------------------------- */
 .topNav ul a {
   display: block;
-  color: #000;
+  color: #303937;
   text-decoration: none;
   padding: 10px;
   font-size: 14px;
-  text-transform: capitalize; }
+  text-transform: capitalize;
+  line-height: 0; }
 
 .bannerNav ul a {
   display: block;
-  color: #000;
+  color: #303937;
   text-decoration: none;
   padding: 10px;
   font-size: 14px;
   text-transform: capitalize; }
 
 .topNav ul a:hover {
-  color: #000; }
+  color: #303937; }
+
+.nav-border {
+  border-left: 1px solid #303937;
+  line-height: 0; }
 
 /* -----------------------------
   Border Banner SECTION
 -------------------------------- */
 .borderBanner {
-  margin-top: 1%;
-  border: 1px solid darkgray;
   background-color: darkgray;
   box-shadow: 0 10px #888888;
   height: 30px;
@@ -118,14 +126,16 @@ body {
       <768 MEDIA QUERY  SECTION
 -------------------------------- */
 @media screen and (max-width: 767px) {
+  #headTop {
+    padding: 0; }
   .borderBanner {
     margin-top: 3%; }
   .bannerNav ul a {
     text-align: center;
     padding: 20px 0;
-    border-bottom: 2px solid #000; }
+    border-bottom: 2px solid #303937; }
   .bannerNav li:first-child a {
-    border-top: 2px solid #000; }
+    border-top: 2px solid #303937; }
   .bannerNav {
     position: static; }
   /*  .topNav .container {
@@ -136,7 +146,8 @@ body {
   .bannerUl {
     display: none; }
   .connect_clarity {
-    border: none; } }
+    border: none;
+    margin-bottom: 6%; } }
 
 /*============ max width: 767px (sm)*/
 /* -----------------------------
@@ -146,6 +157,8 @@ body {
   .row {
     display: flex;
     justify-content: space-between; }
+  #headTop {
+    padding: 10px 0; }
   .cell:not(:last-child) {
     margin-right: 2%; }
   .topNav ul {
@@ -161,8 +174,12 @@ body {
   .column_right {
     width: 20%;
     margin-right: 2%; }
+  .half-cell {
+    width: 34%; }
+  .margin_cell {
+    margin-right: 18%; }
   .connect_clarity, .useful_links {
-    border: 2px solid #000000;
+    border: 2px solid #303937;
     margin-bottom: 8%;
     /*margin: 0 5px;*/ }
     .connect_clarity #clarity_content, .connect_clarity #useful_content, .useful_links #clarity_content, .useful_links #useful_content {
@@ -173,16 +190,17 @@ body {
       MAIN CONTENT SECTION
 -------------------------------- */
 #main_content {
-  margin-top: 3%; }
+  margin-top: 3%;
+  margin-bottom: 3%; }
 
 main h2 {
   font-size: 20px;
-  color: #000;
+  color: #303937;
   font-weight: 800; }
 
 main p {
   font-size: 14px;
-  color: #000;
+  color: #858f8e;
   word-spacing: 1.3px;
   /*letter-spacing: .9px;*/
   line-height: 20px;
@@ -196,7 +214,7 @@ main p {
   margin-top: 15px; }
 
 #bannerImg {
-  height: 136px;
+  height: auto;
   width: 100%;
   z-index: 10; }
 
@@ -215,14 +233,18 @@ ul {
   list-style: none; }
 
 #useLinks li:before {
-  content: "\203A \0020"; }
+  content: "\203A \0020";
+  color: #303937; }
 
 .links {
   padding: 5px 2px; }
 
 .links a {
   text-decoration: none;
-  color: #000000; }
+  color: #858f8e; }
+
+.half-cell {
+  margin-bottom: 3%; }
 
 /* -----------------------------
         SECTION
@@ -235,3 +257,22 @@ ul {
   width: 30px;
   margin-bottom: 2px;
   border: 1px solid red; }
+
+/* -----------------------------
+        FOOT SECTION
+-------------------------------- */
+footer {
+  background-color: #cadad5;
+  font-weight: 800;
+  padding: 20px 0; }
+
+.foot_content {
+  text-align: center; }
+
+#foot_links {
+  display: flex; }
+
+#foot_links li a {
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #303937; }
