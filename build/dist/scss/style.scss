@@ -163,6 +163,14 @@ body{
   .bannerUl {
     display: none;
   }
+
+
+  main h2{
+    font-size: 19px;
+    color: $hCol;
+    font-weight: 600;
+  }
+
   .connect_clarity {
     border: none;
     margin-bottom: 6%;
@@ -211,6 +219,12 @@ body{
     display: none;
   }
 
+  main h2{
+    font-size: 19px;
+    color: $hCol;
+    font-weight: 600;
+  }
+
   .half-cell {
     width: 34%;
   }
@@ -238,11 +252,6 @@ body{
 
 #main_content {
   margin-top: 3%;
-}
-main h2{
-  font-size: 20px;
-  color: $hCol;
-  font-weight: 600;
 }
 
 
@@ -308,7 +317,6 @@ ul {
 }
 
 .border-box {
-  /*padding: 4px 6px ;*/
   padding: 4px 3px;
   margin-bottom: 2px;
 }
@@ -344,6 +352,10 @@ ul {
     MEDIA QUERY  SECTION
 -------------------------------- */
 
+/**********************************/
+/* topNav Queries */
+/**********************************/
+
 @media screen and (min-width: 0px) and (max-width: 450px ){
 
   .menuIcon {
@@ -367,6 +379,13 @@ ul {
   }
 
 }
+
+/*End topNav*/
+
+
+/**********************************/
+/* connect/useful media queries */
+/**********************************/
 
 @media screen and (min-width: 1097px) and (max-width: 3000px ){
 
@@ -408,6 +427,12 @@ ul {
 
 }
 
+/*end of connect and useful media queries*/
+
+
+/**********************************/
+/* column queries in main section */
+/**********************************/
 
 @media screen and (min-width: 768px) and (max-width: 1140px ){
 
@@ -437,3 +462,44 @@ ul {
 
 }
 
+/**********************************/
+/* images queries */
+/**********************************/
+
+@media screen and (max-width: 768px) {
+
+  .display_img{
+    display: block;
+  }
+
+  .display-sm {
+    display: none;
+  }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1140px ){
+
+  .display_img{
+      display: none;
+  }
+
+  .display-sm {
+    display: block;
+  }
+
+}
+
+@media screen and (min-width: 1140px) and (max-width: 3000px ){
+
+  .display_img{
+    display: block;
+  }
+
+  .display-sm {
+    display: none;
+  }
+
+}
+
+/* end of images media queries*/

@@ -5,8 +5,7 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sasswatch": "node-sass --watch build/dist/scss/ --output build/css/",
-    "brfy" : "browserify build/js/main.js -o dist/js/bundle.js"
+    "sasswatch": "node-sass --watch build/dist/scss/ --output build/css/"
   },
   "repository": {
     "type": "git",
@@ -29,7 +28,8 @@
   "dependencies": {
     "enquire.js": "^2.1.6",
     "jquery": "^3.3.1",
-    "node-sass": "~4.8.3"
+    "node-sass": "~4.8.3",
+    "sasswatch": "^1.0.4"
   },
   "devDependencies": {
     "bower": "^1.8.4",
